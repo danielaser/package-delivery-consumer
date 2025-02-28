@@ -18,7 +18,7 @@ public class Tracking {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Status status;
+    private TrackingStatus status;
     private String agency;
     private LocalDateTime arrivalTime;
     private String address;

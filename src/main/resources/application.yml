@@ -16,4 +16,4 @@ spring:
     addresses: ${RABBIT_URI}
 
 rabbitmq:
-  queue: package_delivery_queue
+  queue: logistic_queue
