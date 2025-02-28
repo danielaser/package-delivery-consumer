@@ -22,6 +22,8 @@ public class Package {
     private String sender;
     private LocalDateTime sendDate;
     private String receptor;
+    private Boolean weight;
+    private Double distance;
     private Double price;
 
     @ManyToOne
