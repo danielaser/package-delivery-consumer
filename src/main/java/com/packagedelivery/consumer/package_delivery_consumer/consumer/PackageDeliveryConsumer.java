@@ -14,7 +14,7 @@ public class PackageDeliveryConsumer {
         this.trackingService = trackingService;
     }
 
-    @RabbitListener(queues = "package_delivery_queue")
+    @RabbitListener(queues = "logistic_queue")
     public void receiveMessage(Tracking tracking) {
         System.out.println("Received message " + tracking);
         trackingService.saveTracking(tracking);

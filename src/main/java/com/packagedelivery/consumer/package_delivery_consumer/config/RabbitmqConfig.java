@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 
 public class RabbitmqConfig {
 
-    private static final String QUEUE_NAME = "package_delivery_queue";
+    private static final String QUEUE_NAME = "logistic_queue";
 
     @Bean
     public Queue queue() {
