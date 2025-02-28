@@ -18,7 +18,9 @@ public class Tracking {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     private TrackingStatus status;
+
     private String agency;
     private LocalDateTime arrivalTime;
     private String address;
@@ -26,4 +28,5 @@ public class Tracking {
     @OneToMany(mappedBy = "tracking", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Package> packages;
 
+    private Double price;
 }
