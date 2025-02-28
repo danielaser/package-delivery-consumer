@@ -1,15 +1,14 @@
 package com.packagedelivery.consumer.package_delivery_consumer.dtos;
 
+
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString(exclude = "tracking")
@@ -20,11 +19,11 @@ public class Package {
     private Long id;
 
     private String sender;
-    private LocalDateTime sendDate;
     private String receptor;
     private Boolean weight;
     private Double distance;
     private Double price;
+    private LocalDateTime sendDate;
 
     @ManyToOne
     @JoinColumn(name = "tracking_id", nullable = false)
